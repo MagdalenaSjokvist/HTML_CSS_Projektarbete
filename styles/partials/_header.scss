@@ -4,15 +4,15 @@
 	background-size: cover;
 	background-position: center;
 	color: white;
-	height: 400px;
+	height: 475px;
 	width: 100%;
 
 	@media (min-width: 600px) {
 		height: 700px;
 	}
 
-	&::after,
-	&::before {
+	&::before,
+	&::after {
 		grid-area: 1 / 1;
 		content: "";
 		display: block;
@@ -53,11 +53,11 @@
 	z-index: 10;
 	width: 190px;
 	position: absolute;
-	left: 10%;
+	left: 8vw;
 	top: 40vh;
 
 	&.join-page {
-		top: 65vh;
+		top: 70vh;
 	}
 	/*display: flex;
 	flex-direction: column;
@@ -80,7 +80,7 @@
 		&.join-page {
 			width: 360px;
 			top: 80vh;
-			left: 8vw;
+			left: 10vw;
 		}
 	}
 	@media (min-width: 900px) {
@@ -119,7 +119,7 @@
 		width: 100%;
 		height: 4px;
 		background-color: white;
-		margin: 12px 0;
+		margin: 1em 0;
 	}
 
 	&__sub-heading {
