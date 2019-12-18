@@ -1,0 +1,29 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 30vh;
+	background: #2c4f80;
+	padding: 10vh 18vw;
+	font-family: "Poppins", sans-serif;
+
+	p {
+		color: white;
+		text-align: center;
+		padding: 7px 0;
+	}
+
+	&__company-name {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	&__infotext {
+		font-size: 10px;
+		strong {
+			color: #e32700;
+			font-weight: bold;
+		}
+	}
+}

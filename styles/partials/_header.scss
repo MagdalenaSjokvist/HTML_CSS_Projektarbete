@@ -1,0 +1,136 @@
+.header {
+	display: grid;
+	background-color: #061b38;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	height: 400px;
+	width: 100%;
+
+	@media (min-width: 600px) {
+		height: 700px;
+	}
+
+	&::after,
+	&::before {
+		grid-area: 1 / 1;
+		content: "";
+		display: block;
+	}
+
+	&::before {
+		background: #2c4f80;
+		clip-path: ellipse(85% 65% at 61% 13%);
+	}
+
+	&::after {
+		background: linear-gradient(to bottom, #00132c 10%, rgba(21, 52, 98, 0.9));
+		clip-path: ellipse(85% 65% at 60% 11%);
+	}
+
+	&.index-page {
+		background-image: linear-gradient(to top, #4d1717bb, #b4505083),
+			url("/styles/images/page-1/hero-1.jpg");
+	}
+	&.faq-page {
+		background-image: linear-gradient(to top, #4d1717bb, #b4505083),
+			url("/styles/images/page-2/hero-2.jpg");
+	}
+	&.join-page {
+		background-image: linear-gradient(to bottom, #4d1717bb, #b4505083),
+			url("/styles/images/page-3/hero-3.jpg");
+
+		&::before {
+			clip-path: ellipse(73% 58% at 27% 97%);
+		}
+		&::after {
+			clip-path: ellipse(73% 58% at 27% 99%);
+		}
+	}
+}
+
+.header__text-wrapper {
+	z-index: 10;
+	width: 190px;
+	position: absolute;
+	left: 10%;
+	top: 40vh;
+
+	&.join-page {
+		top: 65vh;
+	}
+	/*display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;*/
+
+	@media (min-width: 600px) {
+		width: 300px;
+
+		&.index-page {
+			width: 300px;
+			top: 25vh;
+			left: 40vw;
+		}
+		&.faq-page {
+			width: 350px;
+			top: 25vh;
+			left: 40vw;
+		}
+		&.join-page {
+			width: 360px;
+			top: 80vh;
+			left: 8vw;
+		}
+	}
+	@media (min-width: 900px) {
+		width: 400px;
+
+		&.index-page {
+			width: 400px;
+			top: 25vh;
+			left: 45vw;
+		}
+		&.faq-page {
+			width: 490px;
+			top: 25vh;
+			left: 45vw;
+		}
+		&.join-page {
+			width: 460px;
+			top: 70vh;
+			left: 8vw;
+		}
+	}
+
+	&__main-heading {
+		font-size: 28px;
+		font-weight: 800;
+		color: white;
+		@media (min-width: 600px) {
+			font-size: 40px;
+		}
+		@media (min-width: 900px) {
+			font-size: 60px;
+		}
+	}
+
+	&__horizontal-line {
+		width: 100%;
+		height: 4px;
+		background-color: white;
+		margin: 12px 0;
+	}
+
+	&__sub-heading {
+		font-size: 18px;
+		font-weight: 700;
+		color: #436dac;
+		@media (min-width: 600px) {
+			font-size: 24px;
+		}
+		@media (min-width: 900px) {
+			font-size: 38px;
+		}
+	}
+}
