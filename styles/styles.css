@@ -344,12 +344,12 @@ main.join-page {
   padding-bottom: 3em;
 }
 
-.text-wrapper {
+main.join-page .text-wrapper {
   padding: 5em 3em;
   max-width: 550px;
 }
 
-.text-wrapper h2 {
+main.join-page .text-wrapper h2 {
   text-align: center;
   color: #e32700;
   font-weight: 800;
@@ -357,12 +357,12 @@ main.join-page {
 }
 
 @media (min-width: 600px) {
-  .text-wrapper h2 {
+  main.join-page .text-wrapper h2 {
     font-size: 36px;
   }
 }
 
-.text-wrapper p {
+main.join-page .text-wrapper p {
   text-align: center;
   color: #2c4f80;
   font-weight: 500;
@@ -370,7 +370,7 @@ main.join-page {
 }
 
 @media (min-width: 600px) {
-  .text-wrapper p {
+  main.join-page .text-wrapper p {
     font-size: 24px;
   }
 }
@@ -468,13 +468,21 @@ main.faq {
   background: #f1f1f1;
 }
 
-main.faq h3 {
-  padding-bottom: 1em;
+main.faq h2 {
+  color: #2c4f80;
+  font-weight: 800;
 }
 
-main.faq p,
 main.faq h3 {
-  padding: 0.5em;
+  color: #e32700;
+  font-weight: 500;
+  padding-left: 5px;
+  padding-bottom: 20px;
+}
+
+main.faq p {
+  padding-left: 5px;
+  padding-bottom: 20px;
 }
 
 main.faq ul {
@@ -511,7 +519,7 @@ main.faq li::before {
           flex-direction: column;
 }
 
-.faq-wrapper .faq-article {
+.faq-article {
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,18 +533,18 @@ main.faq li::before {
   margin-top: 5vh;
 }
 
-.faq-wrapper .faq-article__text-wrapper {
+.faq-article__text-wrapper {
   padding: 2em 3em;
   width: 100%;
 }
 
-.faq-wrapper .faq-article__image-wrapper {
+.faq-article__image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.faq-wrapper .faq-article__image-wrapper img {
+.faq-article__image-wrapper img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -698,12 +706,12 @@ main.join-page {
   padding-bottom: 3em;
 }
 
-.text-wrapper {
+main.join-page .text-wrapper {
   padding: 5em 3em;
   max-width: 550px;
 }
 
-.text-wrapper h2 {
+main.join-page .text-wrapper h2 {
   text-align: center;
   color: #e32700;
   font-weight: 800;
@@ -711,12 +719,12 @@ main.join-page {
 }
 
 @media (min-width: 600px) {
-  .text-wrapper h2 {
+  main.join-page .text-wrapper h2 {
     font-size: 36px;
   }
 }
 
-.text-wrapper p {
+main.join-page .text-wrapper p {
   text-align: center;
   color: #2c4f80;
   font-weight: 500;
@@ -724,7 +732,7 @@ main.join-page {
 }
 
 @media (min-width: 600px) {
-  .text-wrapper p {
+  main.join-page .text-wrapper p {
     font-size: 24px;
   }
 }
@@ -839,7 +847,7 @@ main.index-page p {
 }
 
 .top-article {
-  background: grey;
+  background: white;
 }
 
 @media (min-width: 650px) {
@@ -862,8 +870,17 @@ main.index-page p {
   padding: 4vh 8vw;
 }
 
+.top-article__text-wrapper h2 {
+  color: #e32700;
+  font-weight: 800;
+}
+
 .top-article__text-wrapper p {
   padding-top: 4vh;
+}
+
+.top-article__text-wrapper p strong {
+  color: #e32700;
 }
 
 .top-article__image-wrapper {
@@ -892,6 +909,13 @@ main.index-page p {
 .articles.index h2 {
   padding: 10vh 0 5vh 0;
   text-align: center;
+  color: #2c4f80;
+  font-weight: 800;
+}
+
+.articles.index h3 {
+  color: #e32700;
+  font-weight: 500;
 }
 
 .articles.index article.index {

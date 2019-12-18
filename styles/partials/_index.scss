@@ -14,7 +14,7 @@ main.index-page {
 //FIRST ARTICLE BELOW HEADER
 
 .top-article {
-	background: grey;
+	background: white;
 	@media (min-width: 650px) {
 		display: flex;
 		flex-direction: row-reverse;
@@ -26,8 +26,16 @@ main.index-page {
 		text-align: left;
 		padding: 4vh 8vw;
 
+		h2 {
+			color: #e32700;
+			font-weight: 800;
+		}
+
 		p {
 			padding-top: 4vh;
+			strong {
+				color: #e32700;
+			}
 		}
 	}
 
@@ -54,8 +62,13 @@ main.index-page {
 	h2 {
 		padding: 10vh 0 5vh 0;
 		text-align: center;
+		color: #2c4f80;
+		font-weight: 800;
 	}
-
+	h3 {
+		color: #e32700;
+		font-weight: 500;
+	}
 	article.index {
 		margin-top: 5vh;
 		background: white;
