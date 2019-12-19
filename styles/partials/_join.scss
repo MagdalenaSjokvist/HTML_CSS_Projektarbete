@@ -3,28 +3,25 @@ main.join-page {
 	padding-bottom: 3em;
 
 	.text-wrapper {
-		padding: 5em 3em;
-		max-width: 550px;
+		padding: 5em 2em;
+		max-width: 560px;
 		h2 {
 			text-align: center;
 			color: $heading-color-2;
 			font-weight: 800;
-			font-size: 24px;
-			@media (min-width: 600px) {
-				font-size: 36px;
-			}
 		}
 		p {
 			text-align: center;
 			color: $text-color-2;
 			font-weight: 500;
-			font-size: 18px;
+			font-size: 16px;
 			@media (min-width: 600px) {
 				font-size: 24px;
 			}
 		}
 	}
 }
+
 .form-wrapper {
 	background: $bg-color-form;
 	padding: 2em 2em;
@@ -75,10 +72,12 @@ textarea {
 input::placeholder {
 	font-size: 10px;
 }
+
 button.submit-join {
 	color: $text-color-2;
 	width: 100px;
 	height: 30px;
+	border: solid 1px #2c4f80;
 	border-radius: 10px;
 	display: block;
 	margin-left: auto;

@@ -20,12 +20,12 @@
 
 	&::before {
 		background: $header-color-2;
-		clip-path: ellipse(85% 65% at 61% 13%);
+		clip-path: ellipse(85% 63% at 61% 13%);
 	}
 
 	&::after {
 		background: linear-gradient(to bottom, #00132c 10%, rgba(21, 52, 98, 0.9));
-		clip-path: ellipse(85% 65% at 60% 11%);
+		clip-path: ellipse(85% 63% at 60% 11%);
 	}
 
 	&.index-page {
@@ -44,6 +44,7 @@
 			clip-path: ellipse(73% 58% at 27% 97%);
 		}
 		&::after {
+			background: linear-gradient(to top, #00132c 10%, rgba(21, 52, 98, 0.9));
 			clip-path: ellipse(73% 58% at 27% 99%);
 		}
 	}
@@ -57,7 +58,7 @@
 	top: 40vh;
 
 	&.join-page {
-		top: 70vh;
+		top: 72vh;
 	}
 
 	@media (min-width: 600px) {
@@ -74,7 +75,7 @@
 			left: 40vw;
 		}
 		&.join-page {
-			width: 360px;
+			width: 320px;
 			top: 80vh;
 			left: 10vw;
 		}
