@@ -1,5 +1,4 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800|Poppins:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap");
 .top-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,7 +140,7 @@
   background-color: #061b38;
   background-size: cover;
   background-position: center;
-  color: white;
+  color: #ffffff;
   height: 475px;
   width: 100%;
 }
@@ -204,10 +203,6 @@
   position: absolute;
   left: 8vw;
   top: 40vh;
-  /*display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;*/
 }
 
 .header__text-wrapper.join-page {
@@ -259,7 +254,7 @@
 .header__text-wrapper__main-heading {
   font-size: 28px;
   font-weight: 800;
-  color: white;
+  color: #ffffff;
 }
 
 @media (min-width: 600px) {
@@ -277,14 +272,14 @@
 .header__text-wrapper__horizontal-line {
   width: 100%;
   height: 4px;
-  background-color: white;
+  background-color: #ffffff;
   margin: 1em 0;
 }
 
 .header__text-wrapper__sub-heading {
   font-size: 18px;
   font-weight: 700;
-  color: #436dac;
+  color: #2c4f80;
 }
 
 @media (min-width: 600px) {
@@ -320,7 +315,7 @@
 }
 
 .footer p {
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 7px 0;
 }
@@ -376,7 +371,7 @@ main.join-page .text-wrapper p {
 }
 
 .form-wrapper {
-  background: white;
+  background: #ffffff;
   padding: 2em 2em;
   width: 85%;
   -webkit-box-shadow: 2px 2px 4px 1px #a8a8a8;
@@ -393,10 +388,6 @@ main.join-page .text-wrapper p {
   margin-bottom: 1em;
   grid-row-gap: 1em;
   grid-column-gap: 1em;
-  /*grid-template-areas:
-			"firstname firstname lastname lastname date-of-birth"
-      "profession profession skill skill . ";
-     */
 }
 
 @media (min-width: 550px) {
@@ -476,27 +467,28 @@ main.faq h2 {
 main.faq h3 {
   color: #e32700;
   font-weight: 500;
-  padding-left: 5px;
-  padding-bottom: 20px;
+  padding: 10px 0 25px 5px;
 }
 
 main.faq p {
+  color: #323232;
   padding-left: 5px;
   padding-bottom: 20px;
 }
 
 main.faq ul {
-  padding: 1.5em;
+  color: #323232;
+  padding: 0 1.5em 1.5em 1.5em;
 }
 
 main.faq li {
   list-style: none;
-  /*::before skapar ett pseudoelement innan varje li-element, dvs. punkt i punktlistan. Möjliggör färgade punkter i punktlistan.*/
+  font-weight: 700;
+  line-height: 1.7;
 }
 
 main.faq li::before {
   content: "\2022";
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #e32700;
   font-weight: bold;
   display: inline-block;
@@ -506,7 +498,7 @@ main.faq li::before {
 
 .h2-faq {
   text-align: center;
-  padding: 10vh 0 5vh 0;
+  padding: 10vh 0;
 }
 
 .faq-wrapper {
@@ -520,7 +512,7 @@ main.faq li::before {
 }
 
 .faq-article {
-  background: white;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,7 +522,14 @@ main.faq li::before {
           flex-direction: column;
   min-width: 300px;
   padding: 0;
-  margin-top: 5vh;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+  margin-top: 1em;
+}
+
+.faq-article:nth-of-type(4) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .faq-article__text-wrapper {
@@ -558,11 +557,12 @@ main.faq li::before {
     padding-bottom: 0;
     display: -ms-grid;
     display: grid;
-    grid-gap: 2em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (minmax(200px, 1fr))[4];
-        grid-template-rows: repeat(4, minmax(200px, 1fr));
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
   }
   .faq-wrapper .faq-article {
     -webkit-box-orient: horizontal;
@@ -570,6 +570,9 @@ main.faq li::before {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .faq-wrapper .faq-article .planets {
     -webkit-box-ordinal-group: 0;
@@ -582,8 +585,8 @@ main.faq li::before {
   .faq-wrapper {
     -ms-grid-columns: 3fr 2fr 2fr;
         grid-template-columns: 3fr 2fr 2fr;
-    -ms-grid-rows: (minmax(200px, 1fr))[3];
-        grid-template-rows: repeat(3, minmax(200px, 1fr));
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
   }
   .faq-wrapper .faq-article:nth-of-type(1) {
     -ms-grid-row: 1;
@@ -605,9 +608,6 @@ main.faq li::before {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-area: 2 / 2 / span 1 / span 2;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .faq-wrapper .faq-article:nth-of-type(4) {
     -ms-grid-row: 3;
@@ -615,9 +615,6 @@ main.faq li::before {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: 3 / 1 / span 1 / span 3;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -665,42 +662,6 @@ main.faq li::before {
   width: 30px;
 }
 
-/*
-.top-article {
-	background: grey;
-	@media (min-width: 650px) {
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: center;
-	}
-
-	&__text-wrapper {
-		width: 100%;
-		text-align: left;
-		padding: 8vh 8vw;
-		p {
-			padding-top: 4vh;
-		}
-	}
-
-	&__image-wrapper {
-		width: 100%;
-		@media (min-width: 650px) {
-			flex-basis: auto;
-			align-self: stretch;
-		}
-
-		img {
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-			max-height: 100%;
-			max-width: 100%;
-		}
-	}
-}
-
-*/
 main.join-page {
   background: #f1f1f1;
   padding-bottom: 3em;
@@ -738,7 +699,7 @@ main.join-page .text-wrapper p {
 }
 
 .form-wrapper {
-  background: white;
+  background: #ffffff;
   padding: 2em 2em;
   width: 85%;
   -webkit-box-shadow: 2px 2px 4px 1px #a8a8a8;
@@ -755,10 +716,6 @@ main.join-page .text-wrapper p {
   margin-bottom: 1em;
   grid-row-gap: 1em;
   grid-column-gap: 1em;
-  /*grid-template-areas:
-			"firstname firstname lastname lastname date-of-birth"
-      "profession profession skill skill . ";
-     */
 }
 
 @media (min-width: 550px) {
@@ -847,7 +804,7 @@ main.index-page p {
 }
 
 .top-article {
-  background: white;
+  background: #ffffff;
 }
 
 @media (min-width: 650px) {
@@ -872,7 +829,6 @@ main.index-page p {
 
 .top-article__text-wrapper h2 {
   color: #e32700;
-  font-weight: 800;
 }
 
 .top-article__text-wrapper p {
@@ -881,6 +837,7 @@ main.index-page p {
 
 .top-article__text-wrapper p strong {
   color: #e32700;
+  font-weight: 700;
 }
 
 .top-article__image-wrapper {
@@ -906,21 +863,41 @@ main.index-page p {
   max-width: 100%;
 }
 
+.articles.index {
+  padding: 5vh 5vh;
+}
+
+@media (min-width: 670px) {
+  .articles.index {
+    padding: 10vh 10vh;
+  }
+}
+
 .articles.index h2 {
-  padding: 10vh 0 5vh 0;
+  padding-bottom: 5vh;
   text-align: center;
   color: #2c4f80;
-  font-weight: 800;
 }
 
 .articles.index h3 {
   color: #e32700;
-  font-weight: 500;
+}
+
+.articles.index p {
+  font-size: 14px;
 }
 
 .articles.index article.index {
   margin-top: 5vh;
-  background: white;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+          box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+}
+
+.articles.index article.index:nth-of-type(1) img, .articles.index article.index:nth-of-type(2) img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 75%;
 }
 
 .articles.index article.index:nth-of-type(3) img {
@@ -929,8 +906,14 @@ main.index-page p {
 }
 
 .articles.index .text-wrapper {
-  padding: 2em 1.5em;
+  padding: 2em 1em 1em 1em;
   max-width: 80%;
+}
+
+@media (min-width: 670px) {
+  .articles.index .text-wrapper {
+    padding: 2em 2em;
+  }
 }
 
 .articles.index .image-wrapper {
@@ -939,9 +922,13 @@ main.index-page p {
   padding: 0;
 }
 
+.articles.index .image-wrapper:nth-of-type(3) {
+  padding-top: 1em;
+}
+
 .articles.index .image-wrapper img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -951,7 +938,7 @@ main.index-page p {
 
 .articles.index .image-wrapper img:nth-of-type(1) {
   width: 80%;
-  padding: 3em;
+  padding: 2em;
 }
 
 .articles.index .image-wrapper img:nth-of-type(2) {
@@ -998,12 +985,13 @@ main.index-page p {
         grid-template-columns: 2fr 1fr;
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-    gap: 2em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
   }
   .articles__wrapper .image-wrapper {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    padding: 3em;
+    padding: 2em;
   }
   .articles__wrapper .image-wrapper:nth-of-type(2) {
     padding: 0;
@@ -1012,7 +1000,7 @@ main.index-page p {
   .articles__wrapper .text-wrapper {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    padding: 3em;
+    padding: 2em;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1027,7 +1015,6 @@ main.index-page p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: lightgrey;
   }
   .articles__wrapper article:nth-of-type(2) {
     grid-row: span 2;
@@ -1038,7 +1025,6 @@ main.index-page p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: lightgrey;
   }
   .articles__wrapper article:nth-of-type(3) {
     display: -webkit-box;
@@ -1050,14 +1036,15 @@ main.index-page p {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    background: lightgrey;
   }
 }
 
 button.read-more {
+  background: white;
   color: #2c4f80;
   width: 100px;
   height: 30px;
+  border: solid 1px #2c4f80;
   border-radius: 10px;
 }
 
@@ -1073,30 +1060,35 @@ body {
   min-width: 200px;
 }
 
+nav {
+  background: #061b38;
+}
+
 nav,
 header,
 main {
   font-family: "Montserrat", sans-serif;
-  line-height: 1.3;
 }
 
-/*
-$primaryFont: "Montserrat", sans-serif;
-$secondaryFont: "Poppins", sans-serif;
-*/
-/*
-%image-wrapper {
-	position: relative;
-	height: 100%;
-	width: 100%;
+h2 {
+  font-weight: 800;
 }
 
-%image {
-	object-fit: cover;
-	height: 100%;
-	width: 100%;
-	max-height: 100%;
-	max-width: 100%;
+h3 {
+  font-weight: 500;
 }
-*/
+
+p {
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=styles.css.map */

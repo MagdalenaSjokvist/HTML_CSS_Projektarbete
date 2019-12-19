@@ -1,5 +1,5 @@
 main.join-page {
-	background: #f1f1f1;
+	background: $bg-color-main;
 	padding-bottom: 3em;
 
 	.text-wrapper {
@@ -7,7 +7,7 @@ main.join-page {
 		max-width: 550px;
 		h2 {
 			text-align: center;
-			color: #e32700;
+			color: $heading-color-2;
 			font-weight: 800;
 			font-size: 24px;
 			@media (min-width: 600px) {
@@ -16,7 +16,7 @@ main.join-page {
 		}
 		p {
 			text-align: center;
-			color: #2c4f80;
+			color: $text-color-2;
 			font-weight: 500;
 			font-size: 18px;
 			@media (min-width: 600px) {
@@ -26,7 +26,7 @@ main.join-page {
 	}
 }
 .form-wrapper {
-	background: white;
+	background: $bg-color-form;
 	padding: 2em 2em;
 	width: 85%;
 	box-shadow: 2px 2px 4px 1px rgb(168, 168, 168);
@@ -51,17 +51,13 @@ main.join-page {
 			grid-row-gap: 1em;
 			grid-column-gap: 2.5em;
 		}
-		/*grid-template-areas:
-			"firstname firstname lastname lastname date-of-birth"
-      "profession profession skill skill . ";
-     */
 	}
 }
 
 label {
 	margin: 0;
 	font-size: 14px;
-	color: #2c4f80;
+	color: $text-color-2;
 	font-weight: 700;
 	padding-bottom: 1em;
 }
@@ -72,7 +68,7 @@ textarea {
 	max-width: 1000px;
 	padding: 0.5em;
 	margin-top: 1em;
-	border: 1px solid #2c4f80;
+	border: 1px solid $text-color-2;
 	border-radius: 5px;
 }
 
@@ -80,7 +76,7 @@ input::placeholder {
 	font-size: 10px;
 }
 button.submit-join {
-	color: #2c4f80;
+	color: $text-color-2;
 	width: 100px;
 	height: 30px;
 	border-radius: 10px;

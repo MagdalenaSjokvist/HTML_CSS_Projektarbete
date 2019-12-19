@@ -4,12 +4,12 @@
 	align-items: center;
 	justify-content: center;
 	height: 30vh;
-	background: #2c4f80;
+	background: $bg-color-footer;
 	padding: 10vh 18vw;
 	font-family: "Poppins", sans-serif;
 
 	p {
-		color: white;
+		color: $text-color-footer;
 		text-align: center;
 		padding: 7px 0;
 	}
@@ -22,7 +22,7 @@
 	&__infotext {
 		font-size: 10px;
 		strong {
-			color: #e32700;
+			color: $highlight-color;
 			font-weight: bold;
 		}
 	}

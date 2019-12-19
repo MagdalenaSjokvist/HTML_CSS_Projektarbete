@@ -1,28 +1,33 @@
 main.faq {
-	background: #f1f1f1;
+	background: $bg-color-main;
 	h2 {
-		color: #2c4f80;
+		color: $heading-color-1;
 		font-weight: 800;
 	}
 	h3 {
-		color: #e32700;
+		color: $heading-color-2;
 		font-weight: 500;
-		padding-left: 5px;
-		padding-bottom: 20px;
+		padding: 10px 0 25px 5px;
 	}
+
 	p {
+		color: $text-color-1;
 		padding-left: 5px;
 		padding-bottom: 20px;
 	}
 	ul {
-		padding: 1.5em;
+		color: $text-color-1;
+		padding: 0 1.5em 1.5em 1.5em;
 	}
 
 	li {
-		list-style: none; /*::before skapar ett pseudoelement innan varje li-element, dvs. punkt i punktlistan. Möjliggör färgade punkter i punktlistan.*/
+		list-style: none;
+		font-weight: 700;
+		line-height: 1.7;
+
 		&::before {
-			content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-			color: #e32700;
+			content: "\2022";
+			color: $highlight-color;
 			font-weight: bold;
 			display: inline-block;
 			width: 1em;
@@ -33,7 +38,7 @@ main.faq {
 
 .h2-faq {
 	text-align: center;
-	padding: 10vh 0 5vh 0;
+	padding: 10vh 0;
 }
 
 .faq-wrapper {
@@ -42,12 +47,16 @@ main.faq {
 }
 
 .faq-article {
-	background: white;
+	background: $bg-color-article;
 	display: flex;
 	flex-direction: column;
 	min-width: 300px;
 	padding: 0;
-	margin-top: 5vh;
+	box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+	margin-top: 1em;
+	&:nth-of-type(4) {
+		box-shadow: none;
+	}
 
 	&__text-wrapper {
 		padding: 2em 3em;
@@ -70,15 +79,17 @@ main.faq {
 @media (min-width: 700px) {
 	.faq-wrapper {
 		padding-bottom: 0;
-
 		display: grid;
-		grid-gap: 2em;
+		grid-column-gap: 2em;
+		grid-row-gap: 2em;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, minmax(200px, 1fr));
+		grid-template-rows: repeat(4, 1fr);
 
 		.faq-article {
 			flex-direction: row;
 			padding: 0;
+			align-items: center;
+
 			.planets {
 				order: -1;
 			}
@@ -89,7 +100,7 @@ main.faq {
 @media (min-width: 950px) {
 	.faq-wrapper {
 		grid-template-columns: 3fr 2fr 2fr;
-		grid-template-rows: repeat(3, minmax(200px, 1fr));
+		grid-template-rows: repeat(3, 1fr);
 
 		.faq-article {
 			&:nth-of-type(1) {
@@ -102,11 +113,9 @@ main.faq {
 
 			&:nth-of-type(3) {
 				grid-area: 2 / 2 / span 1 / span 2;
-				align-items: center;
 			}
 			&:nth-of-type(4) {
 				grid-area: 3 / 1 / span 1 / span 3;
-				align-items: center;
 			}
 		}
 	}
@@ -149,40 +158,3 @@ main.faq {
 		}
 	}
 }
-
-/*
-.top-article {
-	background: grey;
-	@media (min-width: 650px) {
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: center;
-	}
-
-	&__text-wrapper {
-		width: 100%;
-		text-align: left;
-		padding: 8vh 8vw;
-		p {
-			padding-top: 4vh;
-		}
-	}
-
-	&__image-wrapper {
-		width: 100%;
-		@media (min-width: 650px) {
-			flex-basis: auto;
-			align-self: stretch;
-		}
-
-		img {
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-			max-height: 100%;
-			max-width: 100%;
-		}
-	}
-}
-
-*/
